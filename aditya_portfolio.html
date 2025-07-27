@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aditya Singh | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f2f6ff;
+      transition: background-color 0.5s, color 0.5s;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+    section { padding: 60px 0; }
+    .section-title { text-align: center; margin-bottom: 40px; font-weight: 600; }
+    .hero {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .skills .card, .projects .card {
+      transition: transform 0.3s;
+      border-radius: 15px;
+    }
+    .skills .card:hover, .projects .card:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background-color: #141e30;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .about-section, .contact-section {
+      background: linear-gradient(to right, #667eea, #764ba2);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      color: white;
+    }
+    .resume-box {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      color: white;
+    }
+    .resume-box img {
+      max-width: 300px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .contact-info {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      color: #333;
+    }
+    .projects .card {
+      background: linear-gradient(to right, #e0f7fa, #fff3e0);
+      border: none;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    }
+    .certificate-card {
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    .certificate-card img {
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .certificate-card img:hover {
+      transform: scale(1.03);
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Dark mode toggle -->
+<button class="btn btn-secondary toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Aditya Singh</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+        <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" data-aos="fade-up">
+  <div class="container">
+    <h1>Hi, I'm Aditya Singh</h1>
+    <p>BCA Student | Web Developer | Tech Enthusiast</p>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" data-aos="fade-up">
+  <div class="container">
+    <div class="section-title"><h2>About Me</h2></div>
+    <div class="about-section text-center">
+      <img src="https://raw.githubusercontent.com/adityasingh427/Portfolio/main/Aditya%20Erp%20Pic.jpg" class="rounded-circle mb-3" style="width:150px; height:150px; object-fit:cover;">
+      <p>I’m currently pursuing BCA (2nd Year) from PSIT College of Higher Education. I’m passionate about coding, designing, and cybersecurity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills" data-aos="fade-up">
+  <div class="container">
+    <div class="section-title"><h2>Skills</h2></div>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card p-3 bg-primary text-white">
+          <h5>Frontend</h5><p>HTML, CSS, JavaScript, Bootstrap</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card p-3 bg-success text-white">
+          <h5>Backend</h5><p>C++, Java, PHP (basic)</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card p-3 bg-warning">
+          <h5>Tools</h5><p>Git, VS Code, Canva</p>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <div class="card p-3 bg-info text-white">
+          <h5>Programming</h5><p>DSA, OOPs Concepts, Problem Solving</p>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <div class="card p-3 bg-danger text-white">
+          <h5>Cybersecurity</h5><p>Fundamentals & Best Practices</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects" data-aos="fade-up">
+  <div class="container">
+    <div class="section-title"><h2>Projects</h2></div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card p-4 mb-3">
+          <h5>Portfolio Website</h5>
+          <p>A personal portfolio built using HTML, CSS, Bootstrap. Hosted on GitHub Pages.</p>
+          <a href="https://github.com/adityasingh427/Portfolio" class="btn btn-outline-primary" target="_blank">View Code</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certificates Section -->
+<section id="certificates" data-aos="fade-up">
+  <div class="container">
+    <div class="section-title"><h2>Certificates</h2></div>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="certificate-card">
+          <img src="https://raw.githubusercontent.com/adityasingh427/Portfolio/main/Artificial%20Intelligence%20Techkriti.jpg" class="img-fluid" alt="AI Workshop">
+          <p>Artificial Intelligence Workshop at IIT Kanpur</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="certificate-card">
+          <img src="https://raw.githubusercontent.com/adityasingh427/Portfolio/main/Icon%20Dsg%20Psit_page-0001.jpg" class="img-fluid" alt="Conference">
+          <p>International Conference at PSIT</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="certificate-card">
+          <img src="https://raw.githubusercontent.com/adityasingh427/Portfolio/main/Techgyan%20Hackathon.jpg" class="img-fluid" alt="Hackathon">
+          <p>Hackathon Competition at IIT Kanpur</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Resume Section -->
+<section id="resume" data-aos="fade-up">
+  <div class="container">
+    <div class="resume-box">
+      <h2>Download My Resume</h2>
+      <p>Preview of my resume is shown below. Click to download the PDF version.</p>
+      <img src="https://adityasingh427.github.io/Portfolio/Aditya_Singh_Resume_page-0001.jpg" alt="Resume Thumbnail" class="img-fluid rounded shadow-sm mb-3" />
+      <a href="https://adityasingh427.github.io/Portfolio/Aditya_Singh_Resume.pdf" class="btn btn-light" download="Aditya_Singh_Resume.pdf">Download Resume (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" data-aos="fade-up">
+  <div class="container">
+    <div class="section-title"><h2>Contact Me</h2></div>
+    <div class="row g-4 contact-section">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark w-100">Send Message</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div class="contact-info">
+          <h5>Contact Information</h5>
+          <p><i class="fas fa-envelope"></i> adityasingh6082@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +91 1234567890</p>
+          <p><i class="fas fa-map-marker-alt"></i> Kanpur, Uttar Pradesh, India</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Aditya Singh. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
+</body>
+</html>
